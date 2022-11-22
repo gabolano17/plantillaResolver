@@ -293,13 +293,13 @@ export const chartExample1 = {
           zeroLineColor: colors.gray[900],
           drawOnChartArea: false
         },
-        // ticks: {
-        //   callback: function(value:any) {
-        //     if (!(value % 10)) {
-        //       return '$' + value + 'k';
-        //     }
-        //   }
-        // }
+        ticks: {
+          callback: function(value:any):any {
+            if (!(value % 10)) {
+              return '$' + value + 'k';
+            }
+          }
+        }
       }]
     }
   },
